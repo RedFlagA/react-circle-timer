@@ -1,25 +1,17 @@
-const path = require("path");
+
 
 module.exports = {
-  entry: "./src/index.js",
-  output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "index_bundle.js",
-  },
   module: {
     rules: [
       {
-        use: ["babel-loader"],
-        exclude: /node_modules/,
         test: /\.(js|jsx)$/,
-        options: {
-          presets: ["@babel/env", "@babel/preset-react"],
-          babelrcRoots: ["../*"],
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
         },
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
       },
     ],
   },
