@@ -1,7 +1,7 @@
 # React Circle Timer
 React Js countdown timer component in a circle shape with color and progress animation.
 
-<img src="https://ibb.co/wp9kjHJ" width="200">
+![Capture](https://github.com/RedFlagA/react-circle-timer/assets/39400184/e7cbb1af-be55-438a-956c-7e14a16f524c)
 
 ## Install
 
