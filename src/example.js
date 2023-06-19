@@ -1,7 +1,7 @@
-import CircleCountDown from "./src/CircleCountDown";
 import { useRef } from "react";
+import ReactCircleTimer from 'react-circle-timer';
 
-function App() {
+function Example() {
   const countDownRef = useRef();
   const start = () => {
     countDownRef.current.startTimer();
@@ -21,7 +21,7 @@ function App() {
       <button onClick={stop}>stop</button>
       <button onClick={resume}>resume</button>
       <button onClick={reset}>reset</button>
-      <CircleCountDown
+      <ReactCircleTimer
         ref={countDownRef}
         size={150}
         strokeBgColor="#4d4d4d"
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Example;

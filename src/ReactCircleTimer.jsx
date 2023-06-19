@@ -1,15 +1,15 @@
 import React, { useState, useEffect, forwardRef } from "react";
 
-const CountdownTimer = (props, ref) => {
+const ReactCircleTimer = (props, ref) => {
   const {
     size = 80,
-    strokeBgColor = "#4d4d4d",
+    strokeBgColor = "#ccc",
     strokeWidth = 10,
     strokeColor = "red",
     seconds = 30,
     prefixTime = "",
     autoPlay = false,
-    customTextStyles = {},
+    colorsTime = {},
   } = props;
   const [countdown, setCountdown] = useState(seconds * 1000);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -87,7 +87,7 @@ const CountdownTimer = (props, ref) => {
           ...countdownSizeStyles,
         }}
       >
-        <p style={{ ...textStyles, ...customTextStyles }}>
+        <p style={{ ...textStyles, ...colorsTime }}>
           {timer} {prefixTime}
         </p>
         <svg style={styles.svg}>
@@ -118,7 +118,7 @@ const CountdownTimer = (props, ref) => {
   );
 };
 
-export default forwardRef(CountdownTimer);
+export default forwardRef(ReactCircleTimer);
 
 const styles = {
   countdownContainer: {
